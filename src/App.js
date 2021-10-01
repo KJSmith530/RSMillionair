@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Main from "./components/Main";
+import Money from "./components/Money";
+import stages from "./stages.json";
+import { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [currentQuestionId, setCurrentQuestionId] = useState(0);
+  const nextQuestion = () => {
+    setCurrentQuestionId(currentQuestionId + 1);
+  };
+  const resetQuestion = () => {
+    setCurrentQuestionId(0);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Main nextQuestion={nextQuestion} resetQuestion={resetQuestion} />
+
+      <Money currentQuestionId={currentQuestionId} stages={stages} />
     </div>
   );
 }
