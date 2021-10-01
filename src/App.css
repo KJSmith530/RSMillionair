@@ -23,3 +23,6 @@
 .amount.active {
   font-weight: bolder;
 }
+.amount.checkpoint {
+  color: yellow;
+}

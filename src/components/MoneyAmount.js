@@ -1,8 +1,15 @@
 import classNames from "classnames";
 
-const MoneyAmount = ({ amount, isActive }) => {
+const MoneyAmount = ({ amount, isActive, isCheckpoint }) => {
   return (
-    <li className={classNames("amount", { active: isActive })}>{amount}</li>
+    <li
+      className={classNames("amount", {
+        active: isActive,
+        checkpoint: isCheckpoint,
+      })}
+    >
+      {amount}
+    </li>
   );
 };
 

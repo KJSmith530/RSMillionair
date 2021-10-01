@@ -1,14 +1,17 @@
 [
   { "id": 0, "amount": 1 },
-  { "id": 1, "amount": 100 },
-  { "id": 2, "amount": 1000 },
-  { "id": 3, "amount": 5000 },
-  { "id": 4, "amount": 10000 },
-  { "id": 5, "amount": 50000 },
-  { "id": 6, "amount": 100000 },
-  { "id": 7, "amount": 500000 },
-  { "id": 8, "amount": 1000000 },
-  { "id": 9, "amount": 2500000 },
-  { "id": 10, "amount": 5000000 },
-  { "id": 11, "amount": 10000000 }
+  { "id": 1, "amount": 1000 },
+  { "id": 2, "amount": 10000 },
+  { "id": 3, "amount": 50000 },
+  { "id": 4, "amount": 100000, "checkpoint": true },
+  { "id": 5, "amount": 500000 },
+  { "id": 6, "amount": 750000 },
+  { "id": 7, "amount": 1000000 },
+  { "id": 8, "amount": 2000000 },
+  { "id": 9, "amount": 3000000,"checkpoint": true },
+  { "id": 10, "amount": 4000000 },
+  { "id": 11, "amount": 5000000 },
+  { "id": 12, "amount": 7500000 },
+  { "id": 13, "amount": 1000000 },
+  { "id": 14, "amount": 1500000,"checkpoint": true }
 ]

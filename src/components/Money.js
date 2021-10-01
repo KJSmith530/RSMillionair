@@ -7,6 +7,7 @@ const Money = ({ stages, currentQuestionId }) => {
       <ul>
         {[...stages].reverse().map((stage) => (
           <MoneyAmount
+            isCheckpoint={stage.checkpoint}
             isActive={currentQuestionId === stage.id}
             key={stage.id}
             amount={stage.amount}
