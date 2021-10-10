@@ -14,7 +14,12 @@ function App() {
   };
   return (
     <div className="app">
-      <Main nextQuestion={nextQuestion} resetQuestion={resetQuestion} />
+      <Main
+        nextQuestion={nextQuestion}
+        resetQuestion={resetQuestion}
+        currentQuestionId={currentQuestionId}
+        stages={stages}
+      />
 
       <Money currentQuestionId={currentQuestionId} stages={stages} />
     </div>

@@ -1,6 +1,24 @@
 [
-  { "id": 0, "amount": 1 },
-  { "id": 1, "amount": 1000 },
+  { 
+    "id": 0, 
+    "amount": 1, 
+    "question": "What color is the Wise Old Man's partyhat?",
+    "answers": [
+      {"id": 0, "text": "Blue", "isCorrect": true},
+      {"id": 1, "text": "Yellow"},
+      {"id": 2, "text": "Purple"},
+      {"id": 3, "text": "Green"}
+    ] 
+  },
+  { "id": 1, 
+    "amount": 1000, 
+    "question": "What color is the Wise Old Man's partyhat?",
+    "answers": [
+      {"id": 0, "text": "hi", "isCorrect": true},
+      {"id": 1, "text": "Yellow"},
+      {"id": 2, "text": "Purple"},
+      {"id": 3, "text": "Green"}
+    ]  },
   { "id": 2, "amount": 10000 },
   { "id": 3, "amount": 50000 },
   { "id": 4, "amount": 100000, "checkpoint": true },
@@ -15,3 +33,4 @@
   { "id": 13, "amount": 1000000 },
   { "id": 14, "amount": 1500000,"checkpoint": true }
 ]
+
