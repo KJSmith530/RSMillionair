@@ -2,10 +2,17 @@ import React from "react";
 import Question from "./Question";
 import Answer from "./Answer";
 
-const Main = ({ nextQuestion, resetQuestion, stages, currentQuestionId }) => {
+const Main = ({
+  nextQuestion,
+  handleWrongAnswer,
+  handleWalkAway,
+  stages,
+  currentQuestionId,
+}) => {
   const currentStage = stages[currentQuestionId];
   return (
     <div className="main">
+      <button onClick={handleWalkAway}>Walk away</button>
       <Question question={currentStage.question} />
       {currentStage.answers.map((answer) => (
         <Answer
@@ -13,7 +20,7 @@ const Main = ({ nextQuestion, resetQuestion, stages, currentQuestionId }) => {
           text={answer.text}
           key={answer.id}
           nextQuestion={nextQuestion}
-          resetQuestion={resetQuestion}
+          handleWrongAnswer={handleWrongAnswer}
         />
       ))}
     </div>

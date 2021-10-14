@@ -1,9 +1,9 @@
-const Answer = ({ text, isCorrect, nextQuestion, resetQuestion }) => {
+const Answer = ({ text, isCorrect, nextQuestion, handleWrongAnswer }) => {
   function handleClick() {
     if (isCorrect) {
       nextQuestion();
     } else {
-      resetQuestion();
+      handleWrongAnswer();
     }
   }
   return <button onClick={handleClick}>{text}</button>;

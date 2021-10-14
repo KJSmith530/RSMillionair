@@ -1,36 +1,170 @@
 [
-  { 
-    "id": 0, 
-    "amount": 1, 
+  {
+    "id": 0,
+    "amount": 1,
     "question": "What color is the Wise Old Man's partyhat?",
     "answers": [
-      {"id": 0, "text": "Blue", "isCorrect": true},
-      {"id": 1, "text": "Yellow"},
-      {"id": 2, "text": "Purple"},
-      {"id": 3, "text": "Green"}
-    ] 
+      { "id": 0, "text": "Blue", "isCorrect": true },
+      { "id": 1, "text": "Yellow" },
+      { "id": 2, "text": "Purple" },
+      { "id": 3, "text": "Green" }
+    ]
   },
-  { "id": 1, 
-    "amount": 1000, 
+  {
+    "id": 1,
+    "amount": 1000,
     "question": "What color is the Wise Old Man's partyhat?",
     "answers": [
-      {"id": 0, "text": "hi", "isCorrect": true},
-      {"id": 1, "text": "Yellow"},
-      {"id": 2, "text": "Purple"},
-      {"id": 3, "text": "Green"}
-    ]  },
-  { "id": 2, "amount": 10000 },
-  { "id": 3, "amount": 50000 },
-  { "id": 4, "amount": 100000, "checkpoint": true },
-  { "id": 5, "amount": 500000 },
-  { "id": 6, "amount": 750000 },
-  { "id": 7, "amount": 1000000 },
-  { "id": 8, "amount": 2000000 },
-  { "id": 9, "amount": 3000000,"checkpoint": true },
-  { "id": 10, "amount": 4000000 },
-  { "id": 11, "amount": 5000000 },
-  { "id": 12, "amount": 7500000 },
-  { "id": 13, "amount": 1000000 },
-  { "id": 14, "amount": 1500000,"checkpoint": true }
+      { "id": 0, "text": "hi", "isCorrect": true },
+      { "id": 1, "text": "Yellow" },
+      { "id": 2, "text": "Purple" },
+      { "id": 3, "text": "Green" }
+    ]
+  },
+  {
+    "id": 2,
+    "amount": 10000,
+    "question": "What color is the Wise Old Man's partyhat?",
+    "answers": [
+      { "id": 0, "text": "hi", "isCorrect": true },
+      { "id": 1, "text": "Yellow" },
+      { "id": 2, "text": "Purple" },
+      { "id": 3, "text": "Green" }
+    ]
+  },
+  {
+    "id": 3,
+    "amount": 50000,
+    "question": "What color is the Wise Old Man's partyhat?",
+    "answers": [
+      { "id": 0, "text": "hi", "isCorrect": true },
+      { "id": 1, "text": "Yellow" },
+      { "id": 2, "text": "Purple" },
+      { "id": 3, "text": "Green" }
+    ]
+  },
+  {
+    "id": 4,
+    "amount": 100000,
+    "checkpoint": true,
+    "question": "What color is the Wise Old Man's partyhat?",
+    "answers": [
+      { "id": 0, "text": "hi", "isCorrect": true },
+      { "id": 1, "text": "Yellow" },
+      { "id": 2, "text": "Purple" },
+      { "id": 3, "text": "Green" }
+    ]
+  },
+  {
+    "id": 5,
+    "amount": 500000,
+    "question": "What color is the Wise Old Man's partyhat?",
+    "answers": [
+      { "id": 0, "text": "hi", "isCorrect": true },
+      { "id": 1, "text": "Yellow" },
+      { "id": 2, "text": "Purple" },
+      { "id": 3, "text": "Green" }
+    ]
+  },
+  {
+    "id": 6,
+    "amount": 750000,
+    "question": "What color is the Wise Old Man's partyhat?",
+    "answers": [
+      { "id": 0, "text": "hi", "isCorrect": true },
+      { "id": 1, "text": "Yellow" },
+      { "id": 2, "text": "Purple" },
+      { "id": 3, "text": "Green" }
+    ]
+  },
+  {
+    "id": 7,
+    "amount": 1000000,
+    "question": "What color is the Wise Old Man's partyhat?",
+    "answers": [
+      { "id": 0, "text": "hi", "isCorrect": true },
+      { "id": 1, "text": "Yellow" },
+      { "id": 2, "text": "Purple" },
+      { "id": 3, "text": "Green" }
+    ]
+  },
+  {
+    "id": 8,
+    "amount": 2000000,
+    "question": "What color is the Wise Old Man's partyhat?",
+    "answers": [
+      { "id": 0, "text": "hi", "isCorrect": true },
+      { "id": 1, "text": "Yellow" },
+      { "id": 2, "text": "Purple" },
+      { "id": 3, "text": "Green" }
+    ]
+  },
+  {
+    "id": 9,
+    "amount": 3000000,
+    "checkpoint": true,
+    "question": "What color is the Wise Old Man's partyhat?",
+    "answers": [
+      { "id": 0, "text": "hi", "isCorrect": true },
+      { "id": 1, "text": "Yellow" },
+      { "id": 2, "text": "Purple" },
+      { "id": 3, "text": "Green" }
+    ]
+  },
+  {
+    "id": 10,
+    "amount": 4000000,
+    "question": "What color is the Wise Old Man's partyhat?",
+    "answers": [
+      { "id": 0, "text": "hi", "isCorrect": true },
+      { "id": 1, "text": "Yellow" },
+      { "id": 2, "text": "Purple" },
+      { "id": 3, "text": "Green" }
+    ]
+  },
+  {
+    "id": 11,
+    "amount": 5000000,
+    "question": "What color is the Wise Old Man's partyhat?",
+    "answers": [
+      { "id": 0, "text": "hi", "isCorrect": true },
+      { "id": 1, "text": "Yellow" },
+      { "id": 2, "text": "Purple" },
+      { "id": 3, "text": "Green" }
+    ]
+  },
+  {
+    "id": 12,
+    "amount": 7500000,
+    "question": "What color is the Wise Old Man's partyhat?",
+    "answers": [
+      { "id": 0, "text": "hi", "isCorrect": true },
+      { "id": 1, "text": "Yellow" },
+      { "id": 2, "text": "Purple" },
+      { "id": 3, "text": "Green" }
+    ]
+  },
+  {
+    "id": 13,
+    "amount": 1000000,
+    "question": "What color is the Wise Old Man's partyhat?",
+    "answers": [
+      { "id": 0, "text": "hi", "isCorrect": true },
+      { "id": 1, "text": "Yellow" },
+      { "id": 2, "text": "Purple" },
+      { "id": 3, "text": "Green" }
+    ]
+  },
+  {
+    "id": 14,
+    "amount": 1500000,
+    "checkpoint": true,
+    "question": "What color is the Wise Old Man's partyhat?",
+    "answers": [
+      { "id": 0, "text": "hi", "isCorrect": true },
+      { "id": 1, "text": "Yellow" },
+      { "id": 2, "text": "Purple" },
+      { "id": 3, "text": "Green" }
+    ]
+  }
 ]
-
