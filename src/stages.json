@@ -13,124 +13,124 @@
   {
     "id": 1,
     "amount": 1000,
-    "question": "What color is the Wise Old Man's partyhat?",
+    "question": "Where do you spawn after tutorial island?",
     "answers": [
-      { "id": 0, "text": "hi", "isCorrect": true },
-      { "id": 1, "text": "Yellow" },
-      { "id": 2, "text": "Purple" },
-      { "id": 3, "text": "Green" }
+      { "id": 0, "text": "Varrock" },
+      { "id": 1, "text": "Draynor Village" },
+      { "id": 2, "text": "Lumbridge", "isCorrect": true },
+      { "id": 3, "text": "Rimmington" }
     ]
   },
   {
     "id": 2,
     "amount": 10000,
-    "question": "What color is the Wise Old Man's partyhat?",
+    "question": "What level do you need to wield runite weapons?",
     "answers": [
-      { "id": 0, "text": "hi", "isCorrect": true },
-      { "id": 1, "text": "Yellow" },
-      { "id": 2, "text": "Purple" },
-      { "id": 3, "text": "Green" }
+      { "id": 0, "text": "35" },
+      { "id": 1, "text": "50" },
+      { "id": 2, "text": "40", "isCorrect": true },
+      { "id": 3, "text": "60" }
     ]
   },
   {
     "id": 3,
     "amount": 50000,
-    "question": "What color is the Wise Old Man's partyhat?",
+    "question": "How many teleports does a fully charged Ring of Dueling provide?",
     "answers": [
-      { "id": 0, "text": "hi", "isCorrect": true },
-      { "id": 1, "text": "Yellow" },
-      { "id": 2, "text": "Purple" },
-      { "id": 3, "text": "Green" }
+      { "id": 0, "text": "6" },
+      { "id": 1, "text": "8", "isCorrect": true },
+      { "id": 2, "text": "4" },
+      { "id": 3, "text": "10" }
     ]
   },
   {
     "id": 4,
     "amount": 100000,
     "checkpoint": true,
-    "question": "What color is the Wise Old Man's partyhat?",
+    "question": "Which spellbook is also refered to as the 'Necromancy Spellbook'?",
     "answers": [
-      { "id": 0, "text": "hi", "isCorrect": true },
-      { "id": 1, "text": "Yellow" },
-      { "id": 2, "text": "Purple" },
-      { "id": 3, "text": "Green" }
+      { "id": 0, "text": "Arceuus", "isCorrect": true },
+      { "id": 1, "text": "Standard" },
+      { "id": 2, "text": "Lunar" },
+      { "id": 3, "text": "Ancient" }
     ]
   },
   {
     "id": 5,
     "amount": 500000,
-    "question": "What color is the Wise Old Man's partyhat?",
+    "question": "What level can you cast High Level Alchemy?",
     "answers": [
-      { "id": 0, "text": "hi", "isCorrect": true },
-      { "id": 1, "text": "Yellow" },
-      { "id": 2, "text": "Purple" },
-      { "id": 3, "text": "Green" }
+      { "id": 0, "text": "50" },
+      { "id": 1, "text": "53" },
+      { "id": 2, "text": "55", "isCorrect": true },
+      { "id": 3, "text": "57" }
     ]
   },
   {
     "id": 6,
     "amount": 750000,
-    "question": "What color is the Wise Old Man's partyhat?",
+    "question": "Who is the king of Varrock?",
     "answers": [
-      { "id": 0, "text": "hi", "isCorrect": true },
-      { "id": 1, "text": "Yellow" },
-      { "id": 2, "text": "Purple" },
-      { "id": 3, "text": "Green" }
+      { "id": 0, "text": "King Arthur" },
+      { "id": 1, "text": "King Lathas" },
+      { "id": 2, "text": "King Roald", "isCorrect": true },
+      { "id": 3, "text": "King Awowogei" }
     ]
   },
   {
     "id": 7,
     "amount": 1000000,
-    "question": "What color is the Wise Old Man's partyhat?",
+    "question": "What does H.A.M. stand for?",
     "answers": [
-      { "id": 0, "text": "hi", "isCorrect": true },
-      { "id": 1, "text": "Yellow" },
-      { "id": 2, "text": "Purple" },
-      { "id": 3, "text": "Green" }
+      { "id": 0, "text": "Humans Against Monsters", "isCorrect": true },
+      { "id": 1, "text": "Humans Are Monsters" },
+      { "id": 2, "text": "Heavy As Metal" },
+      { "id": 3, "text": "Hobgoblins And Magic" }
     ]
   },
   {
     "id": 8,
     "amount": 2000000,
-    "question": "What color is the Wise Old Man's partyhat?",
+    "question": "What is the maximum amount of GP that can be held at once (to the nearest Million)?",
     "answers": [
-      { "id": 0, "text": "hi", "isCorrect": true },
-      { "id": 1, "text": "Yellow" },
-      { "id": 2, "text": "Purple" },
-      { "id": 3, "text": "Green" }
+      { "id": 0, "text": "2073k" },
+      { "id": 1, "text": "2000k" },
+      { "id": 2, "text": "2277k" },
+      { "id": 3, "text": "2147k", "isCorrect": true }
     ]
   },
   {
     "id": 9,
     "amount": 3000000,
     "checkpoint": true,
-    "question": "What color is the Wise Old Man's partyhat?",
+    "question": "What is Jad's full name?",
     "answers": [
-      { "id": 0, "text": "hi", "isCorrect": true },
-      { "id": 1, "text": "Yellow" },
-      { "id": 2, "text": "Purple" },
-      { "id": 3, "text": "Green" }
+      { "id": 0, "text": "TzKet-Jad" },
+      { "id": 1, "text": "TzRek-Jad" },
+      { "id": 2, "text": "TzTok-Jad", "isCorrect": true },
+      { "id": 3, "text": "TzHaar-Jad" }
     ]
   },
   {
     "id": 10,
     "amount": 4000000,
-    "question": "What color is the Wise Old Man's partyhat?",
+    "question": "What wand is not used in the process of getting the Master Wand?",
     "answers": [
-      { "id": 0, "text": "hi", "isCorrect": true },
-      { "id": 1, "text": "Yellow" },
-      { "id": 2, "text": "Purple" },
-      { "id": 3, "text": "Green" }
+      { "id": 0, "text": "Scholar", "isCorrect": true },
+      { "id": 1, "text": "Apprentice" },
+      { "id": 2, "text": "Teacher" },
+      { "id": 3, "text": "Beginner" }
     ]
   },
   {
     "id": 11,
     "amount": 5000000,
-    "question": "What color is the Wise Old Man's partyhat?",
+    "question": "What is the name of the staff used to take down Verzik's shield?",
     "answers": [
-      { "id": 0, "text": "hi", "isCorrect": true },
-      { "id": 1, "text": "Yellow" },
-      { "id": 2, "text": "Purple" },
-      { "id": 3, "text": "Green" }
+      { "id": 0, "text": "Staff of Light" },
+      { "id": 1, "text": "Staff of Dawn" },
+      { "id": 2, "text": "Holy Trident" },
+      { "id": 3, "text": "Dawnbringer", "isCorrect": true }
     ]
   },
   {
