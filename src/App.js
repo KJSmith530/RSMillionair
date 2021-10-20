@@ -49,7 +49,12 @@ function App() {
     setIsPmButtonDisabled(true);
   };
   const [is50ButtonDisabled, setIs50ButtonDisabled] = useState(false);
+  const [is50Active, setIs50Active] = useState([]);
   const handle50Click = () => {
+    const answers = stages[currentQuestionId].answers;
+    const wrongAnswers = answers.filter((answer) => !answer.isCorrect);
+    // setIs50Active([Math.floor(Math.random() * wrongAnswers.length)]);
+    console.log(is50Active);
     setIs50ButtonDisabled(true);
   };
   const [isGambleButtonDisabled, setIsGambleButtonDisabled] = useState(false);
@@ -70,6 +75,7 @@ function App() {
           isPmButtonDisabled={isPmButtonDisabled}
           handlePmClick={handlePmClick}
           is50ButtonDisabled={is50ButtonDisabled}
+          is50Active={is50Active}
           handle50Click={handle50Click}
           isGambleButtonDisabled={isGambleButtonDisabled}
           handleGambleClick={handleGambleClick}

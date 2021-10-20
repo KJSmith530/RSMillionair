@@ -5,20 +5,73 @@
   color: white
 }
 
+.Start {
+  height: 100vh;
+  display: flex;
+  background-color: #864d13;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: white;
+}
+
+.start-button {
+  border: black double;
+  border-radius: 10px;
+  color: white;
+  background-color: gray;
+  box-shadow: 0 9px black;
+  padding: 30px 50px;
+  text-decoration: none;
+}
+.start-button:hover {
+  transform: translateY(3px);
+  box-shadow: 0 5px black;
+  cursor: grab;
+  transition: 0.2s;
+}
+.start-button:active{
+  cursor: grabbing;
+  transform: translateY(5px);
+  box-shadow: 0 0 black ;
+}
+
 .main {
-  width: 100%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0),#86613c) center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  max-width: 75%;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0),#86613c) center;
+}
+.question {
+  text-align: center;
+}
+.answer-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.answer-button {
+  border: none;
+  padding: 20px;
 }
 
 .money {
   max-width: 200px;
-  width: 100%;
+  width: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
+.money-list {
+  padding: 0;
+}
 .amount {
   list-style: none;
 }

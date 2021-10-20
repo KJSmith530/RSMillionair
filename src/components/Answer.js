@@ -1,4 +1,10 @@
-const Answer = ({ text, isCorrect, nextQuestion, handleWrongAnswer }) => {
+const Answer = ({
+  text,
+  isCorrect,
+  nextQuestion,
+  handleWrongAnswer,
+  isDisabled,
+}) => {
   function handleClick() {
     if (isCorrect) {
       nextQuestion();
@@ -6,7 +12,11 @@ const Answer = ({ text, isCorrect, nextQuestion, handleWrongAnswer }) => {
       handleWrongAnswer();
     }
   }
-  return <button onClick={handleClick}>{text}</button>;
+  return (
+    <button className="answer-button" onClick={handleClick}>
+      {text}
+    </button>
+  );
 };
 
 export default Answer;

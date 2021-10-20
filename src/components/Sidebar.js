@@ -11,6 +11,7 @@ const Sidebar = ({
   is50ButtonDisabled,
   handleGambleClick,
   isGambleButtonDisabled,
+  handleWalkAway,
 }) => {
   return (
     <div className="money">
@@ -29,7 +30,7 @@ const Sidebar = ({
         onClick={handleGambleClick}
         isDisabled={isGambleButtonDisabled}
       />
-      <ul>
+      <ul className="money-list">
         {[...stages].reverse().map((stage) => (
           <MoneyAmount
             isCheckpoint={stage.checkpoint}
@@ -39,6 +40,7 @@ const Sidebar = ({
           />
         ))}
       </ul>
+      <button onClick={handleWalkAway}>Walk away</button>
     </div>
   );
 };
