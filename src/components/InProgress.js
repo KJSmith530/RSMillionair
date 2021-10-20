@@ -11,7 +11,7 @@ const InProgress = ({
   isPmButtonDisabled,
   handle50Click,
   is50ButtonDisabled,
-  is50Active,
+  disabled50AnswerIds,
   handleGambleClick,
   isGambleButtonDisabled,
 }) => {
@@ -23,7 +23,7 @@ const InProgress = ({
         currentQuestionId={currentQuestionId}
         stages={stages}
         handle50Click={handle50Click}
-        is50Active={is50Active}
+        disabled50AnswerIds={disabled50AnswerIds}
       />
 
       <Sidebar

@@ -13,7 +13,11 @@ const Answer = ({
     }
   }
   return (
-    <button className="answer-button" onClick={handleClick}>
+    <button
+      disabled={isDisabled}
+      className="answer-button"
+      onClick={handleClick}
+    >
       {text}
     </button>
   );

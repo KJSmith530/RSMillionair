@@ -7,7 +7,7 @@ const Main = ({
   handleWrongAnswer,
   stages,
   currentQuestionId,
-  is50Active,
+  disabled50AnswerIds,
 }) => {
   const currentStage = stages[currentQuestionId];
   return (
@@ -21,7 +21,7 @@ const Main = ({
             key={answer.id}
             nextQuestion={nextQuestion}
             handleWrongAnswer={handleWrongAnswer}
-            isDisabled={is50Active}
+            isDisabled={disabled50AnswerIds.includes(answer.id)}
           />
         ))}
       </div>

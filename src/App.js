@@ -7,14 +7,22 @@ import stages from "./stages.json";
 
 function App() {
   const [gameState, setGameState] = useState("START");
+  const [currentQuestionId, setCurrentQuestionId] = useState(0);
+  const [winnings, setWinnings] = useState(0);
+  const [isPmButtonDisabled, setIsPmButtonDisabled] = useState(false);
+  const [is50ButtonDisabled, setIs50ButtonDisabled] = useState(false);
+  const [disabled50AnswerIds, setDisabled50AnswerIds] = useState([]);
+  const [isGambleButtonDisabled, setIsGambleButtonDisabled] = useState(false);
+
   const startGame = () => {
     setGameState("IN_PROGRESS");
   };
-  const [currentQuestionId, setCurrentQuestionId] = useState(0);
+
   const nextQuestion = () => {
+    setDisabled50AnswerIds([]);
     setCurrentQuestionId(currentQuestionId + 1);
   };
-  const [winnings, setWinnings] = useState(0);
+
   const handleWrongAnswer = () => {
     if (currentQuestionId === 0) {
       setWinnings(0);
@@ -28,6 +36,7 @@ function App() {
     }
     setGameState("RESULTS");
   };
+
   const handleWalkAway = () => {
     if (currentQuestionId === 0) {
       setWinnings(0);
@@ -36,6 +45,7 @@ function App() {
     }
     setGameState("RESULTS");
   };
+
   const handlePlayAgain = () => {
     setCurrentQuestionId(0);
     setIsPmButtonDisabled(false);
@@ -44,23 +54,25 @@ function App() {
     setWinnings(0);
     setGameState("START");
   };
-  const [isPmButtonDisabled, setIsPmButtonDisabled] = useState(false);
+
   const handlePmClick = () => {
     setIsPmButtonDisabled(true);
   };
-  const [is50ButtonDisabled, setIs50ButtonDisabled] = useState(false);
-  const [is50Active, setIs50Active] = useState([]);
+
   const handle50Click = () => {
     const answers = stages[currentQuestionId].answers;
     const wrongAnswers = answers.filter((answer) => !answer.isCorrect);
-    // setIs50Active([Math.floor(Math.random() * wrongAnswers.length)]);
-    console.log(is50Active);
+    const randomIndex = Math.floor(Math.random() * 3);
+    wrongAnswers.splice(randomIndex, 1);
+    const disabledAnswerIds = wrongAnswers.map((answer) => answer.id);
+    setDisabled50AnswerIds(disabledAnswerIds);
     setIs50ButtonDisabled(true);
   };
-  const [isGambleButtonDisabled, setIsGambleButtonDisabled] = useState(false);
+
   const handleGambleClick = () => {
     setIsGambleButtonDisabled(true);
   };
+
   switch (gameState) {
     case "START":
       return <Start startGame={startGame} />;
@@ -75,7 +87,7 @@ function App() {
           isPmButtonDisabled={isPmButtonDisabled}
           handlePmClick={handlePmClick}
           is50ButtonDisabled={is50ButtonDisabled}
-          is50Active={is50Active}
+          disabled50AnswerIds={disabled50AnswerIds}
           handle50Click={handle50Click}
           isGambleButtonDisabled={isGambleButtonDisabled}
           handleGambleClick={handleGambleClick}
