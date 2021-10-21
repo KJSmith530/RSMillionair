@@ -14,6 +14,7 @@ const InProgress = ({
   disabled50AnswerIds,
   handleGambleClick,
   isGambleButtonDisabled,
+  disabledGambleAnswerIds,
 }) => {
   return (
     <div className="InProgress">
@@ -24,6 +25,8 @@ const InProgress = ({
         stages={stages}
         handle50Click={handle50Click}
         disabled50AnswerIds={disabled50AnswerIds}
+        handleGambleClick={handleGambleClick}
+        disabledGambleAnswerIds={disabledGambleAnswerIds}
       />
 
       <Sidebar

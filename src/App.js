@@ -8,10 +8,12 @@ import stages from "./stages.json";
 function App() {
   const [gameState, setGameState] = useState("START");
   const [currentQuestionId, setCurrentQuestionId] = useState(0);
+  const [gambleQuestionId, setGamblequestionId] = useState(3);
   const [winnings, setWinnings] = useState(0);
   const [isPmButtonDisabled, setIsPmButtonDisabled] = useState(false);
   const [is50ButtonDisabled, setIs50ButtonDisabled] = useState(false);
   const [disabled50AnswerIds, setDisabled50AnswerIds] = useState([]);
+  const [disabledGambleAnswerIds, setDisabledGambleAnswerIds] = useState([]);
   const [isGambleButtonDisabled, setIsGambleButtonDisabled] = useState(false);
 
   const startGame = () => {
@@ -52,6 +54,7 @@ function App() {
     setIs50ButtonDisabled(false);
     setIsGambleButtonDisabled(false);
     setWinnings(0);
+    setDisabled50AnswerIds([]);
     setGameState("START");
   };
 
@@ -67,10 +70,23 @@ function App() {
     const disabledAnswerIds = wrongAnswers.map((answer) => answer.id);
     setDisabled50AnswerIds(disabledAnswerIds);
     setIs50ButtonDisabled(true);
+    console.log(disabledAnswerIds);
   };
 
   const handleGambleClick = () => {
-    setIsGambleButtonDisabled(true);
+    setGamblequestionId(currentQuestionId + 3);
+    console.log(gambleQuestionId);
+    // const answers = stages[currentQuestionId + 3].answers;
+    // const wrongAnswers = answers.filter((answer) => !answer.isCorrect);
+    // const randomIndex = Math.floor(Math.random() * 3);
+    // wrongAnswers.splice(randomIndex, 1);
+    // const disabledAnswerIds = wrongAnswers.map((answer) => answer.id);
+    // if (stages[currentQuestionId] === gambleQuestionId) {
+    //   setDisabledGambleAnswerIds(disabledAnswerIds);
+    //   console.log("here");
+    // }
+    // console.log(answers);
+    // setIsGambleButtonDisabled(true);
   };
 
   switch (gameState) {
@@ -90,6 +106,7 @@ function App() {
           disabled50AnswerIds={disabled50AnswerIds}
           handle50Click={handle50Click}
           isGambleButtonDisabled={isGambleButtonDisabled}
+          disabledGambleAnswerIds={disabledGambleAnswerIds}
           handleGambleClick={handleGambleClick}
         />
       );

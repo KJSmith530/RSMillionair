@@ -58,8 +58,36 @@
   gap: 10px;
 }
 .answer-button {
+  border: black double;
+  border-radius: 10px;
+  color: white;
+  background-color: gray;
+  box-shadow: 0 9px rgba(0,0,0,.6);
+  padding: 30px 40px;
+  text-decoration: none;
+  max-width: 150px;
+  max-height: 100px;
+  min-width: 150px;
+  min-height: 100px;
+}
+.answer-button:hover {
+  transform: translateY(3px);
+  box-shadow: 0 5px rgba(0,0,0,.6);
+  cursor: grab;
+  transition: 0.2s;
+}
+.answer-button:active {
+  cursor: grabbing;
+  transform: translateY(5px);
+  box-shadow: 0 0 rgba(0,0,0,.6);
+}
+.answer-button:disabled {
+  cursor: not-allowed;
+  background-color: rgb(228, 228, 228);
   border: none;
-  padding: 20px;
+  transform: translateY(5px);
+  box-shadow: 0 0 rgba(0,0,0,.6);
+  transition: 1s;
 }
 
 .money {

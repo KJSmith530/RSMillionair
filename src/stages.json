@@ -2,23 +2,23 @@
   {
     "id": 0,
     "amount": 1,
-    "question": "What color is the Wise Old Man's partyhat?",
-    "answers": [
-      { "id": 0, "text": "Blue", "isCorrect": true },
-      { "id": 1, "text": "Yellow" },
-      { "id": 2, "text": "Purple" },
-      { "id": 3, "text": "Green" }
-    ]
-  },
-  {
-    "id": 1,
-    "amount": 1000,
     "question": "Where do you spawn after tutorial island?",
     "answers": [
       { "id": 0, "text": "Varrock" },
       { "id": 1, "text": "Draynor Village" },
       { "id": 2, "text": "Lumbridge", "isCorrect": true },
       { "id": 3, "text": "Rimmington" }
+    ]
+  },
+  {
+    "id": 1,
+    "amount": 1000,
+    "question": "What color is the Wise Old Man's partyhat?",
+    "answers": [
+      { "id": 0, "text": "Blue", "isCorrect": true },
+      { "id": 1, "text": "Yellow" },
+      { "id": 2, "text": "Purple" },
+      { "id": 3, "text": "Green" }
     ]
   },
   {
