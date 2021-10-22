@@ -4,6 +4,7 @@ import InProgress from "./components/InProgress";
 import Results from "./components/Results";
 import Start from "./components/Start";
 import stages from "./stages.json";
+import useAudio from "./hooks/useAudio.js";
 
 function App() {
   const [gameState, setGameState] = useState("START");
@@ -15,8 +16,14 @@ function App() {
   const [disabled50AnswerIds, setDisabled50AnswerIds] = useState([]);
   const [disabledGambleAnswerIds, setDisabledGambleAnswerIds] = useState([]);
   const [isGambleButtonDisabled, setIsGambleButtonDisabled] = useState(false);
+  const playAlchSound = useAudio("/alch.mp3", 0.3);
+  // console.log(audioRef);
+  // useEffect(() => {
+  //   console.log("effect");
+  // }, []);
 
   const startGame = () => {
+    playAlchSound();
     setGameState("IN_PROGRESS");
   };
 
