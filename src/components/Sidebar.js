@@ -15,21 +15,23 @@ const Sidebar = ({
 }) => {
   return (
     <div className="money">
-      <Lifeline
-        text="PM"
-        onClick={handlePmClick}
-        isDisabled={isPmButtonDisabled}
-      />
-      <Lifeline
-        text="50/50"
-        onClick={handle50Click}
-        isDisabled={is50ButtonDisabled}
-      />
-      <Lifeline
-        text="Gamble"
-        onClick={handleGambleClick}
-        isDisabled={isGambleButtonDisabled}
-      />
+      <div>
+        <Lifeline
+          text="PM"
+          onClick={handlePmClick}
+          isDisabled={isPmButtonDisabled}
+        />
+        <Lifeline
+          text="50/50"
+          onClick={handle50Click}
+          isDisabled={is50ButtonDisabled}
+        />
+        <Lifeline
+          text="Gamble"
+          onClick={handleGambleClick}
+          isDisabled={isGambleButtonDisabled}
+        />
+      </div>
       <ul className="money-list">
         {[...stages].reverse().map((stage) => (
           <MoneyAmount
@@ -40,7 +42,9 @@ const Sidebar = ({
           />
         ))}
       </ul>
-      <button onClick={handleWalkAway}>Walk away</button>
+      <button className="walk-away" onClick={handleWalkAway}>
+        H
+      </button>
     </div>
   );
 };

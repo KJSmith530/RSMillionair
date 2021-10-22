@@ -8,7 +8,7 @@ import stages from "./stages.json";
 function App() {
   const [gameState, setGameState] = useState("START");
   const [currentQuestionId, setCurrentQuestionId] = useState(0);
-  const [gambleQuestionId, setGamblequestionId] = useState(3);
+  const [gambleQuestionId, setGamblequestionId] = useState(null);
   const [winnings, setWinnings] = useState(0);
   const [isPmButtonDisabled, setIsPmButtonDisabled] = useState(false);
   const [is50ButtonDisabled, setIs50ButtonDisabled] = useState(false);
@@ -23,6 +23,7 @@ function App() {
   const nextQuestion = () => {
     setDisabled50AnswerIds([]);
     setCurrentQuestionId(currentQuestionId + 1);
+    console.log(gambleQuestionId);
   };
 
   const handleWrongAnswer = () => {
@@ -75,19 +76,19 @@ function App() {
 
   const handleGambleClick = () => {
     setGamblequestionId(currentQuestionId + 3);
-    console.log(gambleQuestionId);
-    // const answers = stages[currentQuestionId + 3].answers;
-    // const wrongAnswers = answers.filter((answer) => !answer.isCorrect);
-    // const randomIndex = Math.floor(Math.random() * 3);
-    // wrongAnswers.splice(randomIndex, 1);
-    // const disabledAnswerIds = wrongAnswers.map((answer) => answer.id);
-    // if (stages[currentQuestionId] === gambleQuestionId) {
-    //   setDisabledGambleAnswerIds(disabledAnswerIds);
-    //   console.log("here");
-    // }
-    // console.log(answers);
-    // setIsGambleButtonDisabled(true);
+    const answers = stages[currentQuestionId + 3].answers;
+    const wrongAnswers = answers.filter((answer) => !answer.isCorrect);
+    const randomIndex = Math.floor(Math.random() * 3);
+    wrongAnswers.splice(randomIndex, 1);
+    const disabledAnswerIds = wrongAnswers.map((answer) => answer.id);
+    if (stages[currentQuestionId].id === gambleQuestionId) {
+      setDisabledGambleAnswerIds(disabledAnswerIds);
+      console.log("here");
+    }
+    console.log(answers);
+    setIsGambleButtonDisabled(true);
   };
+  console.log(gambleQuestionId);
 
   switch (gameState) {
     case "START":

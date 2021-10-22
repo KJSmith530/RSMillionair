@@ -51,10 +51,12 @@
 }
 .question {
   text-align: center;
+  padding-bottom: 30px;
 }
 .answer-block {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
 }
 .answer-button {
@@ -111,4 +113,24 @@
 }
 .amount.checkpoint {
   color: yellow;
+}
+
+.walk-away {
+  margin-top: 10px;
+  border-radius: 50%;
+  border-style: solid;
+  padding: 5px 9px;
+  border-width: 5px;
+  border-color: rgb(47, 35, 209);
+  background-color: rgb(10, 24, 44);
+  color: white;
+  font-weight: bold;
+  font-size: large;
+}
+.walk-away:hover{
+  border-color: rgb(85, 74, 245);
+  cursor: grab;
+}
+.walk-away:active {
+cursor: grabbing;
 }
