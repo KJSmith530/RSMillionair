@@ -14,7 +14,7 @@ const InProgress = ({
   disabled50AnswerIds,
   handleGambleClick,
   isGambleButtonDisabled,
-  disabledGambleAnswerIds,
+  // disabledGambleAnswerIds,
 }) => {
   return (
     <div className="InProgress">
@@ -26,7 +26,7 @@ const InProgress = ({
         handle50Click={handle50Click}
         disabled50AnswerIds={disabled50AnswerIds}
         handleGambleClick={handleGambleClick}
-        disabledGambleAnswerIds={disabledGambleAnswerIds}
+        // disabledGambleAnswerIds={disabledGambleAnswerIds}
       />
 
       <Sidebar

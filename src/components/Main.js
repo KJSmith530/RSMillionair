@@ -8,7 +8,7 @@ const Main = ({
   stages,
   currentQuestionId,
   disabled50AnswerIds,
-  disabledGambleAnswerIds,
+  // disabledGambleAnswerIds,
   handleGambleClick,
 }) => {
   const currentStage = stages[currentQuestionId];
@@ -23,11 +23,7 @@ const Main = ({
             key={answer.id}
             nextQuestion={nextQuestion}
             handleWrongAnswer={handleWrongAnswer}
-            isDisabled={
-              disabled50AnswerIds.includes(answer.id)
-              // disabledGambleAnswerIds.includes(answer.id)
-            }
-            // isDisabled={disabledGambleAnswerIds.includes(answer.id)}
+            isDisabled={disabled50AnswerIds.includes(answer.id)}
           />
         ))}
       </div>

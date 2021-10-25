@@ -82,20 +82,8 @@ function App() {
   };
 
   const handleGambleClick = () => {
-    setGamblequestionId(currentQuestionId + 3);
-    const answers = stages[currentQuestionId + 3].answers;
-    const wrongAnswers = answers.filter((answer) => !answer.isCorrect);
-    const randomIndex = Math.floor(Math.random() * 3);
-    wrongAnswers.splice(randomIndex, 1);
-    const disabledAnswerIds = wrongAnswers.map((answer) => answer.id);
-    if (stages[currentQuestionId].id === gambleQuestionId) {
-      setDisabledGambleAnswerIds(disabledAnswerIds);
-      console.log("here");
-    }
-    console.log(answers);
     setIsGambleButtonDisabled(true);
   };
-  console.log(gambleQuestionId);
 
   switch (gameState) {
     case "START":
@@ -114,7 +102,7 @@ function App() {
           disabled50AnswerIds={disabled50AnswerIds}
           handle50Click={handle50Click}
           isGambleButtonDisabled={isGambleButtonDisabled}
-          disabledGambleAnswerIds={disabledGambleAnswerIds}
+          // disabledGambleAnswerIds={disabledGambleAnswerIds}
           handleGambleClick={handleGambleClick}
         />
       );
@@ -133,3 +121,13 @@ function App() {
 }
 
 export default App;
+
+// setGamblequestionId(currentQuestionId + 3);
+// const answers = stages[currentQuestionId + 3].answers;
+// const wrongAnswers = answers.filter((answer) => !answer.isCorrect);
+// const randomIndex = Math.floor(Math.random() * 3);
+// wrongAnswers.splice(randomIndex, 1);
+// const disabledAnswerIds = wrongAnswers.map((answer) => answer.id);
+// if (stages[currentQuestionId].id === gambleQuestionId) {
+//   setDisabledGambleAnswerIds(disabledAnswerIds);
+//   console.log("here");

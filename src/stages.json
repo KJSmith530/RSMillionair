@@ -83,9 +83,9 @@
     "question": "What does H.A.M. stand for?",
     "answers": [
       { "id": 0, "text": "Humans Against Monsters", "isCorrect": true },
-      { "id": 1, "text": "Humans Are Monsters" },
+      { "id": 1, "text": "Hobgoblins And Magic" },
       { "id": 2, "text": "Heavy As Metal" },
-      { "id": 3, "text": "Hobgoblins And Magic" }
+      { "id": 3, "text": "Humans Are Monsters" }
     ]
   },
   {
@@ -125,28 +125,28 @@
   {
     "id": 11,
     "amount": 5000000,
-    "question": "What is the name of the staff used to take down Verzik's shield?",
+    "question": "Assuming all other combat starts are 99, what prayer level is needed for level 126 combat?",
     "answers": [
-      { "id": 0, "text": "Staff of Light" },
-      { "id": 1, "text": "Staff of Dawn" },
-      { "id": 2, "text": "Holy Trident" },
-      { "id": 3, "text": "Dawnbringer", "isCorrect": true }
+      { "id": 0, "text": "96" },
+      { "id": 1, "text": "97" },
+      { "id": 2, "text": "98", "isCorrect": true },
+      { "id": 3, "text": "99" }
     ]
   },
   {
     "id": 12,
     "amount": 7500000,
-    "question": "What color is the Wise Old Man's partyhat?",
+    "question": "Which monster has the highest combat level?",
     "answers": [
-      { "id": 0, "text": "hi", "isCorrect": true },
-      { "id": 1, "text": "Yellow" },
-      { "id": 2, "text": "Purple" },
-      { "id": 3, "text": "Green" }
+      { "id": 0, "text": "Verzik Vitur", "isCorrect": true },
+      { "id": 1, "text": "Great Olm" },
+      { "id": 2, "text": "TzKal-Zuk" },
+      { "id": 3, "text": "Phosani's Nightmare" }
     ]
   },
   {
     "id": 13,
-    "amount": 1000000,
+    "amount": 10000000,
     "question": "What color is the Wise Old Man's partyhat?",
     "answers": [
       { "id": 0, "text": "hi", "isCorrect": true },
@@ -157,7 +157,7 @@
   },
   {
     "id": 14,
-    "amount": 1500000,
+    "amount": 15000000,
     "checkpoint": true,
     "question": "What color is the Wise Old Man's partyhat?",
     "answers": [
