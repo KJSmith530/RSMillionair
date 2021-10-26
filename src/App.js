@@ -9,14 +9,16 @@ import useAudio from "./hooks/useAudio.js";
 function App() {
   const [gameState, setGameState] = useState("START");
   const [currentQuestionId, setCurrentQuestionId] = useState(0);
-  const [gambleQuestionId, setGamblequestionId] = useState(null);
+  // const [gambleQuestionId, setGamblequestionId] = useState(null);
   const [winnings, setWinnings] = useState(0);
   const [isPmButtonDisabled, setIsPmButtonDisabled] = useState(false);
   const [is50ButtonDisabled, setIs50ButtonDisabled] = useState(false);
   const [disabled50AnswerIds, setDisabled50AnswerIds] = useState([]);
-  const [disabledGambleAnswerIds, setDisabledGambleAnswerIds] = useState([]);
+  // const [disabledGambleAnswerIds, setDisabledGambleAnswerIds] = useState([]);
   const [isGambleButtonDisabled, setIsGambleButtonDisabled] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const playAlchSound = useAudio("/alch.mp3", 0.3);
+
   // console.log(audioRef);
   // useEffect(() => {
   //   console.log("effect");
@@ -30,7 +32,6 @@ function App() {
   const nextQuestion = () => {
     setDisabled50AnswerIds([]);
     setCurrentQuestionId(currentQuestionId + 1);
-    console.log(gambleQuestionId);
   };
 
   const handleWrongAnswer = () => {
@@ -53,6 +54,14 @@ function App() {
     } else {
       setWinnings(stages[currentQuestionId - 1].amount);
     }
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  const leaveGame = () => {
     setGameState("RESULTS");
   };
 
@@ -61,6 +70,7 @@ function App() {
     setIsPmButtonDisabled(false);
     setIs50ButtonDisabled(false);
     setIsGambleButtonDisabled(false);
+    setModalIsOpen(false);
     setWinnings(0);
     setDisabled50AnswerIds([]);
     setGameState("START");
@@ -104,6 +114,9 @@ function App() {
           isGambleButtonDisabled={isGambleButtonDisabled}
           // disabledGambleAnswerIds={disabledGambleAnswerIds}
           handleGambleClick={handleGambleClick}
+          modalIsOpen={modalIsOpen}
+          leaveGame={leaveGame}
+          closeModal={closeModal}
         />
       );
     case "RESULTS":

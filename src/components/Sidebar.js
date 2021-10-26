@@ -1,6 +1,7 @@
 import React from "react";
 import Lifeline from "./Lifeline";
 import MoneyAmount from "./MoneyAmount";
+import Modal from "react-modal";
 
 const Sidebar = ({
   stages,
@@ -12,6 +13,9 @@ const Sidebar = ({
   handleGambleClick,
   isGambleButtonDisabled,
   handleWalkAway,
+  modalIsOpen,
+  leaveGame,
+  closeModal,
 }) => {
   return (
     <div className="money">
@@ -45,6 +49,11 @@ const Sidebar = ({
       <button className="walk-away" onClick={handleWalkAway}>
         H
       </button>
+      <Modal isOpen={modalIsOpen} className="modal">
+        <h1>Are You Sure?</h1>
+        <button onClick={leaveGame}>Yes</button>
+        <button onClick={closeModal}>No</button>
+      </Modal>
     </div>
   );
 };

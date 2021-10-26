@@ -14,6 +14,9 @@ const InProgress = ({
   disabled50AnswerIds,
   handleGambleClick,
   isGambleButtonDisabled,
+  modalIsOpen,
+  closeModal,
+  leaveGame,
   // disabledGambleAnswerIds,
 }) => {
   return (
@@ -39,6 +42,9 @@ const InProgress = ({
         is50ButtonDisabled={is50ButtonDisabled}
         handleGambleClick={handleGambleClick}
         isGambleButtonDisabled={isGambleButtonDisabled}
+        modalIsOpen={modalIsOpen}
+        leaveGame={leaveGame}
+        closeModal={closeModal}
       />
     </div>
   );
