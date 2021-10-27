@@ -9,12 +9,10 @@ import useAudio from "./hooks/useAudio.js";
 function App() {
   const [gameState, setGameState] = useState("START");
   const [currentQuestionId, setCurrentQuestionId] = useState(0);
-  // const [gambleQuestionId, setGamblequestionId] = useState(null);
   const [winnings, setWinnings] = useState(0);
   const [isPmButtonDisabled, setIsPmButtonDisabled] = useState(false);
   const [is50ButtonDisabled, setIs50ButtonDisabled] = useState(false);
   const [disabled50AnswerIds, setDisabled50AnswerIds] = useState([]);
-  // const [disabledGambleAnswerIds, setDisabledGambleAnswerIds] = useState([]);
   const [isGambleButtonDisabled, setIsGambleButtonDisabled] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const playAlchSound = useAudio("/alch.mp3", 0.3);
@@ -30,8 +28,15 @@ function App() {
   };
 
   const nextQuestion = () => {
-    setDisabled50AnswerIds([]);
-    setCurrentQuestionId(currentQuestionId + 1);
+    console.log(stages.length);
+    console.log(currentQuestionId);
+    if (currentQuestionId + 1 === stages.length) {
+      setGameState("RESULTS");
+      setWinnings(stages[currentQuestionId].amount);
+    } else {
+      setDisabled50AnswerIds([]);
+      setCurrentQuestionId(currentQuestionId + 1);
+    }
   };
 
   const handleWrongAnswer = () => {
@@ -102,6 +107,7 @@ function App() {
       return (
         <InProgress
           stages={stages}
+          winnings={winnings}
           currentQuestionId={currentQuestionId}
           nextQuestion={nextQuestion}
           handleWrongAnswer={handleWrongAnswer}
@@ -112,7 +118,6 @@ function App() {
           disabled50AnswerIds={disabled50AnswerIds}
           handle50Click={handle50Click}
           isGambleButtonDisabled={isGambleButtonDisabled}
-          // disabledGambleAnswerIds={disabledGambleAnswerIds}
           handleGambleClick={handleGambleClick}
           modalIsOpen={modalIsOpen}
           leaveGame={leaveGame}

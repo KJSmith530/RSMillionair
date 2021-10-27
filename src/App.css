@@ -1,14 +1,14 @@
 .InProgress {
   height: 100vh;
   display: flex;
-  background-color: #864d13;
+  background-color: rgb(133, 108, 75);
   color: white
 }
 
 .Start {
   height: 100vh;
   display: flex;
-  background-color: #864d13;
+  background-color: rgb(133, 108, 75);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@
   border-radius: 10px;
   color: white;
   background-color: gray;
-  box-shadow: 0 9px rgba(0,0,0,.6);
+  box-shadow: 0 9px rgba(37, 24, 14, 0.6);
   padding: 30px 50px;
   text-decoration: none;
 }
@@ -45,14 +45,21 @@
   justify-content: center;
   align-items: center;
   flex: 3;
-  /* width: 75%; */
-  /* max-width: 75%; */
-  background: linear-gradient(to top, rgba(255, 255, 255, 0),#86613c) center;
+
 }
 .question {
   text-align: center;
   padding-bottom: 30px;
+  margin: 0;
 }
+
+.main-seperate {
+  width: 250px;
+  max-width: 40%;
+  border-top: solid 1px #5a4229;
+  margin-bottom: 40px;
+}
+
 .answer-block {
   display: flex;
   flex-wrap: wrap;
@@ -64,7 +71,7 @@
   border-radius: 10px;
   color: white;
   background-color: gray;
-  box-shadow: 0 9px rgba(0,0,0,.6);
+  box-shadow: 0 9px rgba(37, 24, 14, 0.6);
   padding: 30px 40px;
   text-decoration: none;
   max-width: 150px;
@@ -92,27 +99,63 @@
   transition: 1s;
 }
 
+.lifeline {
+  margin: 4px 5px;
+  border: black double;
+  border-radius: 10px;
+  color: white;
+  background-color: gray;
+  box-shadow: 0 5px rgba(37, 24, 14, 0.6);
+  padding: 5px 20px;
+  text-decoration: none;
+}
+.lifeline:hover {
+  transform: translateY(3px);
+  box-shadow: 0 2px rgba(0,0,0,.6);
+  cursor: grab;
+  transition: 0.2s;
+}
+.lifeline:disabled {
+  cursor: not-allowed;
+  background-color: rgb(228, 228, 228);
+  border: rgb(231, 231, 231) double;
+  transform: translateY(5px);
+  box-shadow: 0 1px rgba(0,0,0,.6);
+  transition: 1s;
+}
+
+.lifeline-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 4px 10px;
+  justify-content: center;
+}
+
 .money {
-  /* max-width: 200px; */
-  width: 25%;
-  min-width: 200px;
-  /* flex: 1; */
+  width: 300px;
+  max-width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-left: ridge 5px rgba(77, 47, 24, 0.6);
 }
 .money-list {
   padding: 0;
 }
 .amount {
   list-style: none;
+  background-color: rgb(95, 69, 35);
+  padding: 2px 5px;
+  margin-top: 2px;
+  text-align: center;
 }
 .amount.active {
-  font-weight: bolder;
+  font-weight:bold;
+  background-color: rgb(194, 172, 144);
 }
 .amount.checkpoint {
-  color: yellow;
+  color: rgb(240, 217, 118);
 }
 
 .walk-away {

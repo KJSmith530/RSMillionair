@@ -5,6 +5,7 @@ import Modal from "react-modal";
 
 const Sidebar = ({
   stages,
+  winnings,
   currentQuestionId,
   handlePmClick,
   isPmButtonDisabled,
@@ -19,7 +20,7 @@ const Sidebar = ({
 }) => {
   return (
     <div className="money">
-      <div>
+      <div className="lifeline-container">
         <Lifeline
           text="PM"
           onClick={handlePmClick}
@@ -31,7 +32,7 @@ const Sidebar = ({
           isDisabled={is50ButtonDisabled}
         />
         <Lifeline
-          text="Gamble"
+          text="Clan Chat"
           onClick={handleGambleClick}
           isDisabled={isGambleButtonDisabled}
         />
@@ -40,7 +41,7 @@ const Sidebar = ({
         {[...stages].reverse().map((stage) => (
           <MoneyAmount
             isCheckpoint={stage.checkpoint}
-            isActive={currentQuestionId === stage.id}
+            isActive={currentQuestionId >= stage.id}
             key={stage.id}
             amount={stage.amount}
           />
@@ -51,7 +52,7 @@ const Sidebar = ({
       </button>
       <Modal isOpen={modalIsOpen} className="modal">
         <div className="modal-content">
-          <h1>Are You Sure?</h1>
+          <h1>Walk away with ${winnings}</h1>
           <div className="button-container">
             <button onClick={leaveGame}>Yes</button>
             <button onClick={closeModal}>No</button>

@@ -1,6 +1,6 @@
 const Lifeline = ({ text, onClick, isDisabled }) => {
   return (
-    <button onClick={onClick} disabled={isDisabled}>
+    <button className="lifeline" onClick={onClick} disabled={isDisabled}>
       {text}
     </button>
   );

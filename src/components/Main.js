@@ -15,6 +15,7 @@ const Main = ({
   return (
     <div className="main">
       <Question question={currentStage.question} />
+      <div className="main-seperate"></div>
       <div className="answer-block">
         {currentStage.answers.map((answer) => (
           <Answer

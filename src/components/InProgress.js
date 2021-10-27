@@ -3,6 +3,7 @@ import Sidebar from "./Sidebar";
 
 const InProgress = ({
   nextQuestion,
+  winnings,
   handleWrongAnswer,
   handleWalkAway,
   currentQuestionId,
@@ -33,6 +34,7 @@ const InProgress = ({
       />
 
       <Sidebar
+        winnings={winnings}
         currentQuestionId={currentQuestionId}
         stages={stages}
         handleWalkAway={handleWalkAway}

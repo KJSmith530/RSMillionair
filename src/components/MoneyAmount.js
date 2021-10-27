@@ -8,7 +8,7 @@ const MoneyAmount = ({ amount, isActive, isCheckpoint }) => {
         checkpoint: isCheckpoint,
       })}
     >
-      {amount} gp
+      {amount}
     </li>
   );
 };
