@@ -50,9 +50,13 @@ const Sidebar = ({
         H
       </button>
       <Modal isOpen={modalIsOpen} className="modal">
-        <h1>Are You Sure?</h1>
-        <button onClick={leaveGame}>Yes</button>
-        <button onClick={closeModal}>No</button>
+        <div className="modal-content">
+          <h1>Are You Sure?</h1>
+          <div className="button-container">
+            <button onClick={leaveGame}>Yes</button>
+            <button onClick={closeModal}>No</button>
+          </div>
+        </div>
       </Modal>
     </div>
   );

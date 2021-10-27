@@ -137,34 +137,39 @@ cursor: grabbing;
 
 .modal {
   display: flex;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  max-width: 40%;
-  height: 300px;
-  max-height: 25%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.modal-content{
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  max-height: 200px;
   background-color: dimgray;
   border-color: black;
   border-width: 10px;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 20px 10px 1px rgba(0,0,0,.3);
+  text-align: center;
+  box-shadow: -5px 5px 5px 1px rgba(0,0,0,.3);
 }
-
+.modal:focus {
+   outline: 10px;
+  }
 .modal h1{
-  margin-bottom:25%;
   color: yellow;
-  position: absolute;
+  margin-bottom: 35px;
 }
 .modal button {
-  margin: 20% 10% 0 10%;
-  position: relative;
   border-color: black;
   border-style: outset;
   border-width: 4px;
   color: white;
   background-color: dimgray;
   padding: 15px 40px;
+}
+
+.button-container {
+  justify-content: space-between;
+  margin: 0 20px;
+  display: flex;
 }
