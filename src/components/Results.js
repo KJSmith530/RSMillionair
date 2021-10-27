@@ -1,8 +1,10 @@
 const Results = ({ winnings, handlePlayAgain }) => {
   return (
-    <div>
+    <div className="Results">
       <h1>You Win:{winnings}</h1>
-      <button onClick={handlePlayAgain}>Play Again</button>
+      <button onClick={handlePlayAgain} className="results-button">
+        Play Again
+      </button>
     </div>
   );
 };

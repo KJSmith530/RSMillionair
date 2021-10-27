@@ -23,13 +23,11 @@ function App() {
   // }, []);
 
   const startGame = () => {
-    playAlchSound();
+    // playAlchSound();
     setGameState("IN_PROGRESS");
   };
 
   const nextQuestion = () => {
-    console.log(stages.length);
-    console.log(currentQuestionId);
     if (currentQuestionId + 1 === stages.length) {
       setGameState("RESULTS");
       setWinnings(stages[currentQuestionId].amount);

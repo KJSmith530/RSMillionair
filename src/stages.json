@@ -147,24 +147,24 @@
   {
     "id": 13,
     "amount": 10000000,
-    "question": "What color is the Wise Old Man's partyhat?",
+    "question": "How much prayer bonus does the Ancient Staff provide?",
     "answers": [
-      { "id": 0, "text": "hi", "isCorrect": true },
-      { "id": 1, "text": "Yellow" },
-      { "id": 2, "text": "Purple" },
-      { "id": 3, "text": "Green" }
+      { "id": 0, "text": "2" },
+      { "id": 1, "text": "-1", "isCorrect": true },
+      { "id": 2, "text": "0" },
+      { "id": 3, "text": "3" }
     ]
   },
   {
     "id": 14,
     "amount": 15000000,
     "checkpoint": true,
-    "question": "What color is the Wise Old Man's partyhat?",
+    "question": "What can a bucket NOT hold?",
     "answers": [
-      { "id": 0, "text": "hi", "isCorrect": true },
-      { "id": 1, "text": "Yellow" },
-      { "id": 2, "text": "Purple" },
-      { "id": 3, "text": "Green" }
+      { "id": 0, "text": "Chocolatey Milk" },
+      { "id": 1, "text": "Beer", "isCorrect": true },
+      { "id": 2, "text": "Slime" },
+      { "id": 3, "text": "Apple Mush" }
     ]
   }
 ]
