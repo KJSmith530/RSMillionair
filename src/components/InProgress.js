@@ -2,9 +2,7 @@ import Main from "./Main";
 import Sidebar from "./Sidebar";
 
 const InProgress = ({
-  nextQuestion,
   winnings,
-  handleWrongAnswer,
   handleWalkAway,
   currentQuestionId,
   stages,
@@ -18,37 +16,39 @@ const InProgress = ({
   modalIsOpen,
   closeModal,
   leaveGame,
-  // disabledGambleAnswerIds,
+  handleAnswerClick,
+  answerSelected,
 }) => {
   return (
-    <div className="InProgress">
-      <Main
-        nextQuestion={nextQuestion}
-        handleWrongAnswer={handleWrongAnswer}
-        currentQuestionId={currentQuestionId}
-        stages={stages}
-        handle50Click={handle50Click}
-        disabled50AnswerIds={disabled50AnswerIds}
-        handleGambleClick={handleGambleClick}
-        // disabledGambleAnswerIds={disabledGambleAnswerIds}
-      />
+    <>
+      <div className="InProgress">
+        <Main
+          currentQuestionId={currentQuestionId}
+          stages={stages}
+          handle50Click={handle50Click}
+          disabled50AnswerIds={disabled50AnswerIds}
+          handleGambleClick={handleGambleClick}
+          handleAnswerClick={handleAnswerClick}
+        />
 
-      <Sidebar
-        winnings={winnings}
-        currentQuestionId={currentQuestionId}
-        stages={stages}
-        handleWalkAway={handleWalkAway}
-        handlePmClick={handlePmClick}
-        isPmButtonDisabled={isPmButtonDisabled}
-        handle50Click={handle50Click}
-        is50ButtonDisabled={is50ButtonDisabled}
-        handleGambleClick={handleGambleClick}
-        isGambleButtonDisabled={isGambleButtonDisabled}
-        modalIsOpen={modalIsOpen}
-        leaveGame={leaveGame}
-        closeModal={closeModal}
-      />
-    </div>
+        <Sidebar
+          winnings={winnings}
+          currentQuestionId={currentQuestionId}
+          stages={stages}
+          handleWalkAway={handleWalkAway}
+          handlePmClick={handlePmClick}
+          isPmButtonDisabled={isPmButtonDisabled}
+          handle50Click={handle50Click}
+          is50ButtonDisabled={is50ButtonDisabled}
+          handleGambleClick={handleGambleClick}
+          isGambleButtonDisabled={isGambleButtonDisabled}
+          modalIsOpen={modalIsOpen}
+          leaveGame={leaveGame}
+          closeModal={closeModal}
+        />
+      </div>
+      {answerSelected && <div className="answer-selected-overlay" />}
+    </>
   );
 };
 

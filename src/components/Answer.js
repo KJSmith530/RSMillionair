@@ -1,17 +1,4 @@
-const Answer = ({
-  text,
-  isCorrect,
-  nextQuestion,
-  handleWrongAnswer,
-  isDisabled,
-}) => {
-  function handleClick() {
-    if (isCorrect) {
-      nextQuestion();
-    } else {
-      handleWrongAnswer();
-    }
-  }
+const Answer = ({ text, isDisabled, handleClick }) => {
   return (
     <button
       disabled={isDisabled}

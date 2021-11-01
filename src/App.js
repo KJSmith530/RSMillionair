@@ -5,6 +5,7 @@ import Results from "./components/Results";
 import Start from "./components/Start";
 import stages from "./stages.json";
 import useAudio from "./hooks/useAudio.js";
+import wait from "./utils/wait";
 
 function App() {
   const [gameState, setGameState] = useState("START");
@@ -16,18 +17,30 @@ function App() {
   const [isGambleButtonDisabled, setIsGambleButtonDisabled] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const playAlchSound = useAudio("/alch.mp3", 0.3);
+  const [answerSelected, setAnswerSelected] = useState(false);
 
   // console.log(audioRef);
   // useEffect(() => {
   //   console.log("effect");
   // }, []);
 
+  const handleAnswerClick = async (id, isCorrect) => {
+    setAnswerSelected(true);
+    await wait(3000);
+    if (isCorrect) {
+      nextQuestion();
+    } else {
+      handleWrongAnswer();
+    }
+    setAnswerSelected(false);
+  };
+
   const startGame = () => {
     // playAlchSound();
     setGameState("IN_PROGRESS");
   };
 
-  const nextQuestion = () => {
+  const nextQuestion = async () => {
     if (currentQuestionId + 1 === stages.length) {
       setGameState("RESULTS");
       setWinnings(stages[currentQuestionId].amount);
@@ -107,8 +120,6 @@ function App() {
           stages={stages}
           winnings={winnings}
           currentQuestionId={currentQuestionId}
-          nextQuestion={nextQuestion}
-          handleWrongAnswer={handleWrongAnswer}
           handleWalkAway={handleWalkAway}
           isPmButtonDisabled={isPmButtonDisabled}
           handlePmClick={handlePmClick}
@@ -120,6 +131,8 @@ function App() {
           modalIsOpen={modalIsOpen}
           leaveGame={leaveGame}
           closeModal={closeModal}
+          handleAnswerClick={handleAnswerClick}
+          answerSelected={answerSelected}
         />
       );
     case "RESULTS":

@@ -3,13 +3,10 @@ import Question from "./Question";
 import Answer from "./Answer";
 
 const Main = ({
-  nextQuestion,
-  handleWrongAnswer,
   stages,
   currentQuestionId,
   disabled50AnswerIds,
-  // disabledGambleAnswerIds,
-  handleGambleClick,
+  handleAnswerClick,
 }) => {
   const currentStage = stages[currentQuestionId];
   return (
@@ -17,16 +14,19 @@ const Main = ({
       <Question question={currentStage.question} />
       <div className="main-seperate"></div>
       <div className="answer-block">
-        {currentStage.answers.map((answer) => (
-          <Answer
-            isCorrect={answer.isCorrect}
-            text={answer.text}
-            key={answer.id}
-            nextQuestion={nextQuestion}
-            handleWrongAnswer={handleWrongAnswer}
-            isDisabled={disabled50AnswerIds.includes(answer.id)}
-          />
-        ))}
+        {currentStage.answers.map((answer) => {
+          function handleClick() {
+            handleAnswerClick(answer.id, answer.isCorrect);
+          }
+          return (
+            <Answer
+              handleClick={handleClick}
+              text={answer.text}
+              key={answer.id}
+              isDisabled={disabled50AnswerIds.includes(answer.id)}
+            />
+          );
+        })}
       </div>
     </div>
   );
