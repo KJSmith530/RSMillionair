@@ -16,7 +16,9 @@ function App() {
   const [disabled50AnswerIds, setDisabled50AnswerIds] = useState([]);
   const [isGambleButtonDisabled, setIsGambleButtonDisabled] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const playAlchSound = useAudio("/alch.mp3", 0.3);
+  const playAlchSound = useAudio("/alch.mp3", 0.1);
+  const playCorrectSound = useAudio("/Correct.mp3", 0.1);
+  const playLoseSound = useAudio("/lose.mp3", 0.1);
   const [answerSelected, setAnswerSelected] = useState(false);
 
   // console.log(audioRef);
@@ -29,14 +31,16 @@ function App() {
     await wait(3000);
     if (isCorrect) {
       nextQuestion();
+      playCorrectSound();
     } else {
       handleWrongAnswer();
+      playLoseSound();
     }
     setAnswerSelected(false);
   };
 
   const startGame = () => {
-    // playAlchSound();
+    playAlchSound();
     setGameState("IN_PROGRESS");
   };
 
